@@ -14,9 +14,8 @@ echo "$@"
 # usage: script_name search_string
 
 curl -X 'GET' \
-  "https://www.ebi.ac.uk/emdb/api/search/$@" \
+  "https://www.ebi.ac.uk/emdb/api/search/$@?fl=emdb_id%2Ctitle%2Cresolution%2Cfitted_pdbs%2Cxref_UNIPROTKB%2Cxref_ALPHAFOLD" \
   -H 'accept: text/csv' \
-  -H 'X-CSRFToken: 1ziFM3XS75jURyzFvTTdktH09yIED0uRVoFR4zmCRPU0CDIWtSSCoporzbGQv4lJ' \          # can prob delete these bottom 3
+  -H 'X-CSRFToken: fXJIBIxS0as6wbgs1qpsLws2gctH0UXF9M6UTeWCKU3chgpJZpoRPs9tGPrTSYOx' \
   -H 'Cache-Control: no-cache' \
   -H 'Pragma: no-cache'
-
